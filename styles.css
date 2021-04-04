@@ -1,0 +1,153 @@
+html {
+  font-family: 'Karla', sans-serif;
+}
+
+.logo {
+  justify-content: flex-start;
+  font-family: 'karla', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #111;
+}
+
+.main-nav {
+  padding-top: 20px;
+  padding-left: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding-top: 20px;
+}
+
+li {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  color: #999;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: #999;
+}
+
+/*EFFECTS*/
+a:hover {
+  color: #111;
+}
+
+/* WORDS INSIDE OF HOVER */
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.wrapper, .box1 {
+  position: relative;
+}
+
+/*OVERLAY*/
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: #212529a6;
+}
+
+/* OVERLAY APPLIED TO IMAGE */
+.wrapper:hover .overlay {
+  opacity: 1;
+}
+
+.box, .box1 {
+  width: 100%;
+  height: auto;
+}
+
+.thumbGrid {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  grid-gap: auto;
+}
+
+@media only screen and (max-width: 840px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    padding-top: 20px;
+  }
+
+  .mainPage {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  li {
+    font-size: .5rem;
+    padding: 5px;
+  }
+
+  .thumbGrid {
+    grid-template-columns: 1fr;
+    height: auto;
+    display: grid;
+    margin: 0 auto;
+    grid-gap: auto;
+  }
+}
+
+/*
+@media only screen and (max-width: 1920px){
+  .thumbGrid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  .thumbGrid{
+    width: 33.33%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+}
+
+@media only screen and (max-width: 550px){
+  .thumbGrid{
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+
+  }
+}
+@media only screen and (max-width: 500px){
+  .thumbGrid{
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+
+  }
+} */
